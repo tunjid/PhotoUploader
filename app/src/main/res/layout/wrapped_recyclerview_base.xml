@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/quadruple_margin"
+        android:drawablePadding="@dimen/double_margin"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/quarter_margin"
+        android:paddingLeft="@dimen/single_margin"
+        android:paddingRight="@dimen/single_margin"
+        android:paddingTop="@dimen/quarter_margin"
+        android:textColor="@color/grey_600"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/sub_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginLeft="@dimen/single_margin"
+        android:layout_marginRight="@dimen/single_margin"
+        android:layout_marginTop="@dimen/double_margin"
+        android:gravity="center"
+        android:textColor="@color/grey_600"
+        android:textSize="16sp"
+        android:visibility="gone" />
+</RelativeLayout>

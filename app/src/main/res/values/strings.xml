@@ -1,0 +1,74 @@
+<resources>
+    <string name="parse_app_id">FsqnyvoHlCf9TleQdBPMA42AIZkKuN70aPjsqDVe</string>
+    <string name="parse_client_key">G5GII3vCyCytyTDkX87eFMkvL5kzML7n3iLKkp4h</string>
+    <string-array name="home_navigation">
+        <item>Upload a file</item>
+        <item>Uploaded files</item>
+    </string-array>
+    <string name="app_name">Avant</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="error_plain">Error</string>
+    <string name="go_back">Go Back</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="network_error">Nework Error</string>
+    <string name="action_settings">Home</string>
+    <string name="home_nav_open">Home</string>
+    <string name="home_nav_close">Settings</string>
+    <string name="title_activity_main">Avant</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="error">Sorry, there was an error.</string>
+    <!-- HomeActivity -->
+    <string name="confirm_close">Close app ?</string>
+    <!-- HomeActivity -->
+    <!-- LoginSignInFragment -->
+    <string name="user_id">User ID</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="error_invalid_password">Sorry, that password is invalid</string>
+    <string name="error_field_required">Required field</string>
+    <string name="error_invalid_user_token">Password</string>
+    <string name="read_terms">I have read and agreed to the Avant</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="and">and</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="agree_terms">You must agree to the Terms of Service and Privacy Policy to continue</string>
+    <string name="sign_up_success">Sign up success</string>
+    <string name="please_login">Sign Up</string>
+    <string name="sign_in_error">Sorry, there was an error in signing in. Plese check your username and / or your password.</string>
+    <string name="no_such_user">No such user exists, please sign up</string>
+    <!-- LoginSignInFragment -->
+    <!-- ImagePickerDialogFragment -->
+    <string name="camera">Camera</string>
+    <string name="phone_gallery">Phone Gallery</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="image_capture_failed">Image capture failed</string>
+    <string name="image_capture_cancelled">Image capture cancelled</string>
+    <!-- ImagePickerDialogFragment -->
+    <!-- UploadPhotoDialogFragment -->
+    <string name="select_a_document_to_upload">Please select the document you wish to upload.</string>
+    <string name="w2_tax_form">W2 Tax Form</string>
+    <string name="voided_check">Voided Check</string>
+    <string name="utility_bill">Utility Bill</string>
+    <string name="wrong_photo_orientation">Wrong photo orientation</string>
+    <string name="okay">Okay</string>
+    <string name="error_non_camera">Error, please select a camera image.</string>
+    <string name="uploading_file">Uploading file…</string>
+    <string name="upload_successful">Upload successful</string>
+    <string name="upload_failure">Upload failed</string>
+    <string name="processing">Processing…</string>
+    <string name="finishing_up">Finishing up…</string>
+    <string name="starting_upload">Starting upload…</string>
+    <string name="application_review">Your application will be reviewed by an Avant Specialist in the next 24 hours.</string>
+    <!-- UploadPhotoDialogFragment -->
+    <!-- UploadedFilesFragment -->
+    <string name="uploaded">Uploaded: </string>
+    <string name="no_uploads">You haven\'t uploaded any files yet.</string>
+    <!-- UploadedFilesFragment -->
+    <!-- ViewFileFragment -->
+    <string name="view_file">View File </string>
+    <string name="deleted_photo">It appears the photo has been deleted from your device. Download it from Avant?</string>
+    <!-- ViewFileFragment -->
+</resources>

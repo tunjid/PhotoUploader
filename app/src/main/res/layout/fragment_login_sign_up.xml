@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/primary"
+    tools:context="com.myfab5.mobile.myfab5.activities.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/controls"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/photo_grid_size"
+                android:layout_height="@dimen/photo_grid_size"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/double_margin"
+                android:src="@drawable/ic_logo" />
+
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/logo"
+                android:layout_marginLeft="@dimen/single_margin"
+                android:layout_marginRight="@dimen/single_margin"
+                android:layout_marginTop="@dimen/single_and_half_margin"
+                android:backgroundTint="@color/accent"
+                android:hint="@string/user_id"
+                android:padding="@dimen/half_margin"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/user_name"
+                android:layout_marginLeft="@dimen/single_margin"
+                android:layout_marginRight="@dimen/single_margin"
+                android:layout_marginTop="@dimen/single_and_half_margin"
+                android:backgroundTint="@color/accent"
+                android:hint="@string/password"
+                android:imeActionId="@+id/login"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="@dimen/half_margin"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/single_margin"
+                android:layout_marginTop="@dimen/single_margin"
+                android:buttonTint="@color/accent" />
+
+            <TextView
+                android:id="@+id/agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:layout_margin="@dimen/single_margin"
+                android:layout_toRightOf="@+id/checkbox"
+                android:text="@string/read_terms"
+                android:textColor="@color/off_white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/agreement"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/single_margin"
+                android:backgroundTint="@color/accent"
+                android:text="@string/login"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/single_margin"
+                android:backgroundTint="@color/accent"
+                android:text="@string/sign_up"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_40" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp" />
+    </RelativeLayout>
+</RelativeLayout>
+
+
+

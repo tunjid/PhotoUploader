@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/photo_grid_size"
+    android:layout_height="@dimen/photo_grid_size"
+    android:background="@color/off_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/image_intent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:drawableTop="@drawable/ic_photo_library_white_24dp"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="@dimen/single_and_half_margin"
+        android:paddingTop="@dimen/single_and_half_margin"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+</LinearLayout>

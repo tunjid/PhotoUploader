@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/triple_and_half_margin"
+    android:background="@color/primary"
+    android:padding="@dimen/single_margin"
+    tools:context="com.tunjid.projects.avantphotouploader.fragments.UploadFileFragment">
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/double_margin"
+        android:text="@string/select_a_document_to_upload"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="@dimen/single_margin"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/w2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/single_margin"
+            android:buttonTint="@color/accent"
+            android:text="@string/w2_tax_form"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/void_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/single_margin"
+            android:buttonTint="@color/accent"
+            android:text="@string/voided_check"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/utility_bill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accent"
+            android:text="@string/utility_bill"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RadioGroup>
+</RelativeLayout>

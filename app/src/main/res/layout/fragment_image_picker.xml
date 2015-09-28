@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/half_margin"
+    android:layout_marginLeft="@dimen/quarter_margin"
+    android:layout_marginRight="@dimen/quarter_margin"
+    android:layout_marginTop="@dimen/half_margin">
+
+    <RelativeLayout
+        android:id="@+id/card_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="0px"
+                android:layout_height="56dp"
+                android:layout_weight="15"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/ic_arrow_back_white_24dp" />
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="70"
+                android:gravity="center"
+                android:paddingBottom="@dimen/quarter_margin"
+                android:paddingTop="@dimen/half_margin"
+                android:text="@string/pick_image"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/done"
+                android:layout_width="0px"
+                android:layout_height="56dp"
+                android:layout_weight="15"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:src="@drawable/ic_check_white_24dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/image_thumbnail"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_below="@+id/controls"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/single_margin"
+            android:layout_marginRight="@dimen/single_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/remove_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/image_thumbnail"
+            android:layout_alignTop="@id/image_thumbnail"
+            android:layout_marginRight="@dimen/half_margin"
+            android:background="?attr/selectableItemBackground"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:src="@drawable/ic_remove_circle_black_24dp"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/controls"
+            android:layout_marginLeft="@dimen/eigth_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/photo_grid_size"
+    android:layout_height="@dimen/photo_grid_size"
+    android:background="@color/off_white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/off_white" />
+</LinearLayout>
