@@ -61,11 +61,7 @@ public class UploadedFilesFragment extends CoreFragment
 
     private void initializeViewComponents(final View rootView) {
 
-        final RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
-        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        final UploadedFilesAdapter uploadedFilesAdapter = new UploadedFilesAdapter();
-
-        uploadedFilesAdapter.setAdapterListener(new UploadedFilesAdapter.AdapterListener() {
+        final UploadedFilesAdapter.AdapterListener adapterListener = new UploadedFilesAdapter.AdapterListener() {
             @Override
             public void onFormClicked(String formType) {
                 ((HomeActivity) getActivity()).showViewFileFragment(formType);
@@ -76,7 +72,11 @@ public class UploadedFilesFragment extends CoreFragment
                 final TextView noDataTextView = (TextView) rootView.findViewById(R.id.text);
                 noDataTextView.setText(getString(R.string.no_uploads));
             }
-        });
+        };
+
+        final RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
+        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        final UploadedFilesAdapter uploadedFilesAdapter = new UploadedFilesAdapter(adapterListener);
 
         recyclerView.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.primary));
         recyclerView.setLayoutManager(linearLayoutManager);

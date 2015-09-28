@@ -32,10 +32,12 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
     private Context context;
 
     /**
-     * Default constructor, takes no data as all data needed can be obtained statically.
+     * Default constructor, takes no data as all data needed can be obtained statically. It however takes
+     * the listener it needs.
      */
 
-    public UploadedFilesAdapter() {
+    public UploadedFilesAdapter(AdapterListener adapterListener) {
+        this.adapterListener = adapterListener;
         refreshData();
     }
 
