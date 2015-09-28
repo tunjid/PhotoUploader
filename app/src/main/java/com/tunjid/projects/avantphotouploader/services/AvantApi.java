@@ -159,6 +159,8 @@ public class AvantApi extends Service
                                                 notificationBuilder
                                                         .setContentTitle(getString(R.string.upload_successful))
                                                         .setContentText(getString(R.string.application_review))
+                                                        .setStyle(new NotificationCompat.BigTextStyle()
+                                                                .bigText(getString(R.string.application_review)))
                                                         .setProgress(0, 0, false)
                                                         .setAutoCancel(true);
                                                 notificationManager.notify(NOTIFICATION_ID, notificationBuilder.build());

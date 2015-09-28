@@ -72,6 +72,8 @@ public class UploadFileFragment extends CoreFragment
         w2FormButton.setOnClickListener(this);
         voidedCheckButton.setOnClickListener(this);
         utilityBillButton.setOnClickListener(this);
+
+        w2FormButton.performClick();
     }
 
     @Override
@@ -82,7 +84,7 @@ public class UploadFileFragment extends CoreFragment
 
         fab.setOnClickListener(this);
 
-        ((CoreActivity)getActivity()).setToolbarTitle(getResources().getStringArray(R.array.home_navigation)[0]);
+        ((CoreActivity) getActivity()).setToolbarTitle(getResources().getStringArray(R.array.home_navigation)[0]);
         callAfterActivityCreated();
     }
 
