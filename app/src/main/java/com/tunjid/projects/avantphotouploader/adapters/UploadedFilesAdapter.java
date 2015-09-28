@@ -135,9 +135,7 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
             parseFiles.add(Utils.UTILITY_BILL);
         }
 
-        if(parseFiles.size() == 0) {
-            adapterListener.onNoData();
-        }
+        adapterListener.validateData(parseFiles.size() > 0);
 
         super.refreshData();
     }
@@ -184,18 +182,10 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
         }
     }
 
-    /**
-     * Set the adapterListener to be notified when an item has been clicked.
-     */
-    public void setAdapterListener(AdapterListener listener) {
-        this.adapterListener = listener;
-    }
-
-
     public interface AdapterListener {
         void onFormClicked(String formType);
 
-        void onNoData();
+        void validateData(boolean hasData);
     }
 
 }

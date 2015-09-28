@@ -68,9 +68,13 @@ public class UploadedFilesFragment extends CoreFragment
             }
 
             @Override
-            public void onNoData() {
+            public void validateData(boolean hasData) {
                 final TextView noDataTextView = (TextView) rootView.findViewById(R.id.text);
                 noDataTextView.setText(getString(R.string.no_uploads));
+
+                noDataTextView.setVisibility(hasData
+                        ? View.GONE
+                        : View.VISIBLE);
             }
         };
 
