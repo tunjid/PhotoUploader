@@ -181,7 +181,6 @@ public class AvantApi extends Service
                         updateNotification(R.string.upload_failure);
                         stopForeground(false);
                     }
-
                 }
                 else {
                     e.printStackTrace();

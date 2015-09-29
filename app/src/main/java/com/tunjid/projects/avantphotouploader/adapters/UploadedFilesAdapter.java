@@ -1,7 +1,6 @@
 package com.tunjid.projects.avantphotouploader.adapters;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +24,7 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
     private static final int LOADING = 0;
     private static final int FILE_TYPE = 1;
 
-    private ArrayList<String> parseFiles = new ArrayList<>();
+    private final ArrayList<String> parseFiles = new ArrayList<>();
 
     private AdapterListener adapterListener;
 
@@ -71,8 +70,7 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
             case FILE_TYPE:
                 final String formType = parseFiles.get(recyclerViewPosition);
 
-                viewHolder.formName.setTextColor(ContextCompat.getColor(context, R.color.white));
-
+                viewHolder.formName.setClickable(true);
                 switch (formType) {
                     case Utils.W2_FORM:
                         viewHolder.formName.setText(context.getString(R.string.w2_tax_form));
@@ -83,12 +81,17 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
                     case Utils.UTILITY_BILL:
                         viewHolder.formName.setText(context.getString(R.string.utility_bill));
                         break;
+                    default:
+                        // Disable click listener for dummy items.
+                        viewHolder.formName.setClickable(false);
+                        break;
                 }
 
                 viewHolder.viewHolderListener = new ViewHolder.ViewHolderListener() {
                     @Override
                     public void onFormClicked() {
                         adapterListener.onFormClicked(formType);
+
                     }
                 };
                 break;
@@ -135,7 +138,16 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
             parseFiles.add(Utils.UTILITY_BILL);
         }
 
-        adapterListener.validateData(parseFiles.size() > 0);
+        // Add dummy invisible items to list because RecyclerView has a notifydatasetchanged bug with
+        // a data set with less than 5 items in it.
+
+        int actualFileSize = parseFiles.size();
+
+        while (parseFiles.size() < 6) {
+            parseFiles.add("");
+        }
+
+        adapterListener.validateData(actualFileSize > 0);
 
         super.refreshData();
     }
@@ -147,7 +159,6 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
         public int viewType;        // Used to specify the view type.
 
         TextView formName;
-        TextView dateUploaded;
 
         public ViewHolderListener viewHolderListener;
 
@@ -161,9 +172,8 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
                     break;
                 case FILE_TYPE:
                     this.viewType = FILE_TYPE;
-                    formName = (TextView) itemView.findViewById(R.id.text);
-                    dateUploaded = (TextView) itemView.findViewById(R.id.sub_text);
-                    itemView.setOnClickListener(this);
+                    formName = (TextView) itemView;
+                    formName.setOnClickListener(this);
                     break;
             }
         }
@@ -171,7 +181,7 @@ public class UploadedFilesAdapter extends CoreAdapter<UploadedFilesAdapter.ViewH
         @Override
         public void onClick(View v) {
             switch ((v.getId())) {
-                case R.id.container:
+                case R.id.text:
                     viewHolderListener.onFormClicked();
                     break;
             }

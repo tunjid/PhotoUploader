@@ -32,7 +32,7 @@ public abstract class CoreAdapter<VH extends RecyclerView.ViewHolder> extends Re
     }
 
     /**
-     * Used by image heavey recyclerviews who need to clear the bitmaps in the {@link android.widget.ImageView}
+     * Used by image heavy recyclerviews who need to clear the bitmaps in the {@link android.widget.ImageView}
      * {@link android.support.v7.widget.RecyclerView.ViewHolder} when added to the backstack
      */
     public void onDeconstructView() {
